@@ -1,0 +1,114 @@
+<!-- THE BOILERPLATE SHOULD NOT BE REMOVED -->
+<!-- Proper naming convention should be used while naming id attributes. -->
+<!-- ADDING A SUCCESS PAGE FOR THE SAME WILL BOOST YOUR CHANCES -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <style>
+  body 
+  {
+  background-image: url('https://dontpaniclabs.com/wp-content/uploads/2017/07/php.jpg')
+  
+  }
+  h2
+  {
+  text-align:center;
+  }
+ .btn 
+ {
+  background-color:gray;
+  border: solid;
+  color: black;
+  font-family:sans-serif;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+ }
+ .log-form
+ {
+ background-color:black;
+ color:white;
+ font-family: sans-serif;
+ border: solid;
+ padding:10px;
+ text-align:left;
+ width:300px;
+ margin:auto;
+ }
+
+  
+  </style>
+  <script src="main.js"> 
+  function validateform(){  
+var name=document.f1.name.value;  
+var password=document.f1.password.value;  
+  
+if (name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+
+
+  function validatenumber(){  
+var num=document.f3.num.value;  
+if (isNaN(num)){  
+alert("Enter Numeric value only"); 
+ return false;  
+}else{  
+  return true;  
+  }  
+}  
+function validateemail()  
+    {  
+    var x=document.f4.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");  
+    if (atposition<1 || dotposition<atposition+2){  
+      alert("Please enter a valid e-mail address”);  
+      return false;  
+      }  
+    } 
+
+  </script>
+</head>
+<body>
+<img src="data:image/png;base64,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" 
+class="logo" alt="" style="width:400px;height:150px;">
+  <!-- Beautify This -->
+  <div class="log-form">
+    <h2>Enter your details</h2>
+    <form name="f1" method="post" onsubmit=“validateform()">  
+      Name: <input type="text" name="name"><br/>  
+      Password: <input type="password" name="password"><br/> 
+    </form>
+
+	  <form name="f3" onsubmit=“validate()" >  
+       Number: <input type="text" name="num"><br/>  
+      </form> 
+
+	      <form name="f4"  method="post"  onsubmit="validateemail();">  
+        Email: <input type="text" name="email"><br/>    
+       </form> 
+
+      <textarea name="message" id="message" cols="35" rows="4" placeholder="enter message"></textarea></br>
+      <p>Age:</p>
+      <input type="radio" id="above" name="age" value="above">
+      <label for="above">Above 18</label>
+      <input type="radio" id="below" name="age" value="below">
+      <label for="below">Below 18</label></br>
+      <button type="submit" class="btn">Submit</button>
+	  <a href="#">Already Register?</a>
+    </form>
+  </div>
+  <!-- Beautify Ends -->
+</body>
+</html>
